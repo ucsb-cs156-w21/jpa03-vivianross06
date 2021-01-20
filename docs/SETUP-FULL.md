@@ -242,8 +242,8 @@ First, click on the `Create API` button.
 Next, fill in the fields as follows:
 | Field name | Value | Description |
 |------------|-------|-------------|
-| Name | The name of your application | This is just a visual name for the Auth0 API of your application, and in principle it could be anything.  But to help keep things organized, we'll use the same value that we used for the `heroku.app`,   Example `ucsb-cgaucho-dsr-minimal`|
-| Identifier | Copy your full heroku url into this field; e.g. `https://ucsb-cgaucho-dsr-minimal.herokuapp.com` | This will end up serving as the "audience" value, the "key" that identifies custom claims in the JWT token. |
+| Name | The name of your application | This is just a visual name for the Auth0 API of your application, and in principle it could be anything.  But to help keep things organized, we'll use the same value that we used for the `heroku.app`,   Example `jpa03-cgaucho`|
+| Identifier | Copy your full heroku url into this field; e.g. `https://jpa03-cgaucho.herokuapp.com` | This will end up serving as the "audience" value, the "key" that identifies custom claims in the JWT token. |
 | Signing algorithm | RS256 | This determines what cryptographic algorithm is used to verify tokens. The standard is RS256, so we use that here |
 
 It should end up looking like the below image (with your application name):
@@ -272,7 +272,7 @@ username--which we can do with your UCSB username.
 The instructions below are based on the instructions <a href="https://developers.google.com/identity/sign-in/web/sign-in" target="_blank">here</a>.
 
 You'll need the values from your `temp-credentials.txt` file for:
-* `heroku.app` (e.g. `ucsb-cgaucho-dsr-minimal`)
+* `heroku.app` (e.g. `jpa03-cgaucho`)
 * `auth0.tenant` (e.g.`ucsb-cs156-cgaucho`) 
 * `auth0.domain` (e.g. `ucsb-cs156-cgaucho.us.auth0.com`)
 so, have those handy.
@@ -288,18 +288,18 @@ so, have those handy.
    project.
 2. Click `Create credentials > OAuth client ID.`
 3. For the `User Type`, click `Internal` then click `Create`
-4. For the `App Name`, enter your the value you chose for `heroku.app`, e.g. `ucsb-cgaucho-dsr-minimal` 
-5. For the `User Support Email` put in your own `@ucsb.edu` email address. You can leave the other fields with their default values.
+4. For the `App Name`, enter your the value you chose for `heroku.app`, e.g. `jpa03-cgaucho` 
+5. For the `User Support Email` and `Developer Contact Info` put in your own `@ucsb.edu` email address. You can leave the other fields with their default values.
 6. There is a button to "Add or Remove Scopes".  Please click the buttons beside `auth/userinfo/email` and `auth/userinfo/profile`, then click `Update`
 7. Return to the screen where you can click to  `Create credentials > OAuth client ID.`
-3. You should now be asked to select an application type; choose `Web application`
-4. Name your OAuth 2.0 client using the same name as your `auth0.tenant` (e.g. `ucsb-cs156-cgaucho`).   Since you only need one client per Auth0 tenant, it makes sense to give these the same name.
-5. Add an authorized JavaScript origin with the value `https://insert-your-auth0-domain-here`, substituting in the value of `auth0.domain` prefixed with `https://`, e.g. `https://ucsb-cs156-cgaucho.us.auth0.com`
-6. Add an authorized redirect URI, with the value `https://insert-your-auth0-domain-here/login/callback`, substituting in the value of `auth0.domain` prefixed with `https://`, and suffixed with `/login/callback/` e.g. `https://ucsb-cs156-cgaucho.us.auth0.com/login/callback` 
+8. You should now be asked to select an application type; choose `Web application`
+9. Name your OAuth 2.0 client using the same name as your `auth0.tenant` (e.g. `ucsb-cs156-cgaucho`).   Since you only need one client per Auth0 tenant, it makes sense to give these the same name.
+10. Add an authorized JavaScript origin with the value `https://insert-your-auth0-domain-here`, substituting in the value of `auth0.domain` prefixed with `https://`, e.g. `https://ucsb-cs156-cgaucho.us.auth0.com`
+11. Add an authorized redirect URI, with the value `https://insert-your-auth0-domain-here/login/callback`, substituting in the value of `auth0.domain` prefixed with `https://`, and suffixed with `/login/callback/` e.g. `https://ucsb-cs156-cgaucho.us.auth0.com/login/callback` 
    It should look something like this:
    ![](./images/google-create-oauth-client.png)
-7. Scroll down and click "Create" to create your Google OAuth App.
-8. You should see a pop-up with a "Client ID" and "Client Secret". Copy these values into your  `temp-credentials.txt` as the values of 
+12. Scroll down and click "Create" to create your Google OAuth App.
+13. You should see a pop-up with a "Client ID" and "Client Secret". Copy these values into your  `temp-credentials.txt` as the values of 
 `google.clientId` and `google.clientSecret`.  You'll need these in a later step.
 
 ## Step 6: Set up new Auth0 Social Login Connection (once per Auth0 tentant)
