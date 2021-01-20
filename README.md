@@ -2,7 +2,7 @@
 
 Repo: https://ucsb-cs156-w21/jpa03-vivianross06
 
-On Heroku: https://jpa03-vivianross06.herokuapp.com
+On Heroku: https://jpa03-vivianross.herokuapp.com
 
 On Codecov: https://codecov.io/gh/ucsb-cs156-w21/jpa03-vivianross06
 
