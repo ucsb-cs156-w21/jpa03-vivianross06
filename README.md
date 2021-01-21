@@ -1,6 +1,6 @@
 # jpa03-vivianross06
 
-Repo: https://ucsb-cs156-w21/jpa03-vivianross06
+Repo: https://github.com/ucsb-cs156-w21/jpa03-vivianross06
 
 On Heroku: https://jpa03-vivianross.herokuapp.com
 
